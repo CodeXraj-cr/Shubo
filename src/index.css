@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+.font-bengali {
+  font-family: 'Hind Siliguri', 'Noto Serif Bengali', serif;
+}
+
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Diya flickering animation */
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.8));
+  }
+  25% {
+    opacity: 0.88;
+    transform: scale(0.96) translateY(-1px);
+    filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.6));
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.04) translateY(0.5px);
+    filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.9));
+  }
+  75% {
+    opacity: 0.85;
+    transform: scale(0.98) translateY(-0.5px);
+    filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.7));
+  }
+}
+
+.animate-flicker {
+  animation: flicker 2.4s ease-in-out infinite;
+}
+
+/* Subtle petal / spark floating */
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(4deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Shimmer gold text */
+.gold-shimmer {
+  background: linear-gradient(135deg, #FFE29F 0%, #FFAE34 40%, #FFE29F 70%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #120708;
+}
+::-webkit-scrollbar-thumb {
+  background: #3e1619;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #632025;
+}

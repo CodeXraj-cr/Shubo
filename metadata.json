@@ -1,0 +1,6 @@
+{
+  "name": "Puja Moments - আমাদের পুজো | Durga Puja Photo Sharing",
+  "description": "A festive, community-driven photo-sharing platform for Durga Puja memories, pandal hopping, dhak rhythms, and Bengali cultural celebrations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
